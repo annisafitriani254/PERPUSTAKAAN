@@ -1,8 +1,7 @@
 # PERPUSTAKAN ANNISA FITRIANI
 # Selamat Datang di Perpustakaan Annisa Fitriani
 # About me
-<head>
-<body>
+
    http://pustaka.unp.ac.id/
    
 <head>
