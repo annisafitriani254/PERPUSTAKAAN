@@ -7,6 +7,38 @@ Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal say
 <h4><a href="http://pustaka.unp.ac.id/">Kerjasama</a>
 
   <i><h3>Homepage</h3></i>
-<h4><a href="https://annisafitriani254.github.io/Biodata/">Biodata</a>
+<h2>Biodata</h2>
+<table>
+    <tr>
+        <th>Informasi</th>
+        <th>Detail</th>
+    </tr>
+    <tr>
+        <td>Nama</td>
+        <td>Annisa Fitiani</td>
+    </tr>
+    <tr>
+        <td>NIM</td>
+        <td>220709027</td>
+    </tr>
+    <tr>
+        <td>Program Studi</td>
+        <td>Perpustakaan dan Sains Informasi</td>
+    </tr> 
+    <tr>
+        <td>Fakultas</td>
+        <td>Ilmu Budaya</td>
+    </tr>  
+    <tr>
+        <td>Universitas</td>
+        <td>Universitas Sumatera Utara</td>
+    </tr>
+    <tr>
+        <td>Domisili</td>
+        <td>Medan</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>filtrig@gmail.com</td>
 
 
