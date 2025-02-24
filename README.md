@@ -39,6 +39,6 @@ Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal say
     </tr>
     <tr>
         <td>Email</td>
-        <td>filtrig@gmail.com</td>
+        <td>annsaftrnii254@gmail.com</td>
 
 
