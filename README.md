@@ -40,6 +40,7 @@ Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal say
     <tr>
         <td>Email</td>
         <td>annsaftrnii254@gmail.com</td>
+<body>
         <html lang="en">
 <head>
     <meta charset="UTF-8">
