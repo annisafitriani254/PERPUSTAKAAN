@@ -1,10 +1,12 @@
-# _Homepage_
+# <i>Homepage</i>
 # Selamat Datang di Perpustakaan Annisa Fitriani
 ![WhatsApp Image 2025-02-24 at 12 08 48](https://github.com/user-attachments/assets/0b384921-3216-40c7-8c89-fefb10ebaf38)
-
 <body>
-Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
-<h4><a href="http://pustaka.unp.ac.id/">Kerjasama</a>
+ <h2>About Me</h2>
+ Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
+ 
+<h3><a href="http://pustaka.unp.ac.id/">Kerjasama</a>
+ <h2><a href="https://annisafitriani254.github.io/Contact_Us/">Contact Us</a>
 <h2>Biodata</h2>
 <table>
     <tr>
@@ -13,7 +15,7 @@ Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal say
     </tr>
     <tr>
         <td>Nama</td>
-        <td>Annisa Fitriani</td>
+        <td>Annisa Fitiani</td>
     </tr>
     <tr>
         <td>NIM</td>
