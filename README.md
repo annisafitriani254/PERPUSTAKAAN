@@ -4,7 +4,6 @@
 <body>
  <h2>About Me</h2>
  Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
-<!DOCTYPE html>
 <html>
 <head>
 <style>
