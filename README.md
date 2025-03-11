@@ -8,7 +8,7 @@
 <head>
 <style>
 body {
-    background-color: #00FFFF;
+    background-color: #ADD8E6;
 }
 h1 {
     background-color: ##00FFFF;
