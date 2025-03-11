@@ -1,4 +1,4 @@
-# <h3>HomePage<h3>
+# <i>Homepage</i>
 # Selamat Datang di Perpustakaan Annisa Fitriani
 ![WhatsApp Image 2025-02-24 at 12 08 48](https://github.com/user-attachments/assets/0b384921-3216-40c7-8c89-fefb10ebaf38)
 <body>
@@ -8,7 +8,7 @@
 <head>
 <style>
 body {
-    background-color: #93B874;
+    background-color: #00FFFF;
 }
 h1 {
     background-color: ##00FFFF;
