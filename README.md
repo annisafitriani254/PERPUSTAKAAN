@@ -14,7 +14,7 @@ h1 {
     background-color: ##00FFFF;
 }
 p {
-    background-color: #FFFFFF);
+    background-color: #00FFFF);
 }
 </style>
 </head>
