@@ -19,8 +19,7 @@ p {
 </style>
 </head>
 <body>
-<h1>Tajuk dengan Latar Belakang Hijau</h1>
-<p>Paragraf dengan latar belakang putih</p>
+ 
 </body>
 </html>
 <h3><a href="http://pustaka.unp.ac.id/">Kerjasama</a>
