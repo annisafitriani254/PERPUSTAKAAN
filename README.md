@@ -4,7 +4,26 @@
 <body>
  <h2>About Me</h2>
  Hi, perkenalkan, nama saya Annisa. Ini adalah homepage perpustakaan personal saya yang berisi tugas-tugas akademik.
- 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #93B874;
+}
+h1 {
+    background-color: #00b33c;
+}
+p {
+    background-color: #FFFFFF);
+}
+</style>
+</head>
+<body>
+<h1>Tajuk dengan Latar Belakang Hijau</h1>
+<p>Paragraf dengan latar belakang putih</p>
+</body>
+</html>
 <h3><a href="http://pustaka.unp.ac.id/">Kerjasama</a>
  <h2><a href="https://annisafitriani254.github.io/Contact_Us/">Contact Us</a>
 <h2>Biodata</h2>
