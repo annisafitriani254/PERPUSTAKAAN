@@ -57,8 +57,4 @@ p {
     <tr>
         <td>Email</td>
         <td>annsaftrnii254@gmail.com</td>
-<footer>
-        &copy; 2025 Laman Web Saya. Semua Hak Dilindungi.
-    </footer>
-</body>
-</html>
+
