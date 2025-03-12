@@ -59,5 +59,5 @@ p {
         <td>annsaftrnii254@gmail.com</td>
 
 <footer>
-    <p>&copy; 2025 Putri Rania Indriyani</p>
+    <p>&copy; 2025 Annisa Fitriani</p>
 </footer>
