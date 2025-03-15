@@ -58,7 +58,5 @@ p {
         <td>Email</td>
         <td>annsaftrnii254@gmail.com</td>
 
-<footer>
-    <p>&copy; 2025 Annisa Fitriani</p>
-</footer>
+
 
