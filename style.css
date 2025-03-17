@@ -49,6 +49,31 @@ h2 {
     color: #006B6B;
 }
 
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%; /* Sesuaikan ukuran */
+    margin: 20px auto;
+    background: #FAF0E6;
+    border: 1px solid #004C4C;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #004C4C;
+    text-align: left;
+}
+
+th {
+    background-color: #D2B48C;
+    color: #333;
+}
+
 ul {
     list-style-type: square;
     text-align: left;
