@@ -7,7 +7,7 @@ ul {
 
 ul li a {
     text-decoration: none;
-    color:  #ADD8E6;
+    color:  #66FFCC;
     font-weight: bold;
 }
 
@@ -33,7 +33,7 @@ input, textarea {
 }
 
 button {
-    background-color: #ADD8E6;
+    background-color: #66FFCC;
     color: white;
     padding: 10px;
     margin-top: 15px;
@@ -43,5 +43,5 @@ button {
 }
 
 button:hover {
-    background-color: #ADD8E6;
+    background-color: #66FFCC;
 }
