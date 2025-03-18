@@ -52,3 +52,4 @@
     </script>
 </body>
 </html>
+alert("Script berhasil dimuat!");
