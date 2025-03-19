@@ -161,19 +161,44 @@ footer {
     font-size: 14px;
 }
 
+/* --- Animasi dan Responsivitas Gambar GIF --- */
+.responsive-gif {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animasi Muncul Perlahan */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
 /* Responsif untuk perangkat kecil */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: center;
     }
-    
+
     main {
         width: 90%;
         padding: 20px;
     }
-    
+
     form {
         width: 90%;
+    }
+
+    .responsive-gif {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-gif {
+        max-width: 90%;
     }
 }
