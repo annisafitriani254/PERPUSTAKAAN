@@ -14,39 +14,84 @@
             <a href="contact-us.html" class="button">Hubungi Kami</a>
         </nav>
     </header>
+    
     <main>
         <h2>Selamat Datang di Perpustakaan Annisa!</h2>
-<div class="gif-container">
+        <div class="gif-container">
             <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif">
         </div>
-           "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik. Kami percaya bahwa pengetahuan adalah kunci utama untuk membuka peluang masa depan yang lebih cerah. Semoga Anda menemukan manfaat dari setiap informasi yang tersedia di sini!"
+        <p>
+            "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik. Kami percaya bahwa pengetahuan adalah kunci utama untuk membuka peluang masa depan yang lebih cerah. Semoga Anda menemukan manfaat dari setiap informasi yang tersedia di sini!"
         </p>
         <h3>Kerja Sama dan Referensi</h3>
         <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
     </main>
+
+    <!-- Search Bar -->
+    <section id="search-section">
+        <h2>Cari Buku</h2>
+        <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()">
+    </section>
+
     <!-- Rekomendasi Buku -->
     <section id="rekomendasi-buku">
-    <h2>Rekomendasi Buku</h2>
-    <div class="container">
-        <div class="book">
-            <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
-                <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
-            </a>
-            <p>Empat Langkah Pengampunan</p>
+        <h2>Rekomendasi Buku</h2>
+        <div class="container" id="bookList">
+            <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
+                <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
+                    <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
+                </a>
+                <p>Empat Langkah Pengampunan</p>
+            </div>
+            <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
+                <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
+                    <img src="B023.png" alt="Islam’s Reformers">
+                </a>
+                <p>Islam’s Reformers</p>
+            </div>
         </div>
-        <div class="book">
-            <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
-                <img src="B023.png" alt="Islam’s Reformers">
-            </a>
-            <p>Islam’s Reformers</p>
-        </div>
-    </div>
-</section>
+    </section>
+
     <footer>
         <p>© 2025 Annisa Fitriani</p>
     </footer>
-    
-    <!-- Menyisipkan script.js -->
-    <script src="script.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function searchBooks() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let books = document.querySelectorAll(".book");
+
+            books.forEach(book => {
+                let title = book.getAttribute("data-title").toLowerCase();
+                let author = book.getAttribute("data-author").toLowerCase();
+                let category = book.getAttribute("data-category").toLowerCase();
+
+                if (title.includes(input) || author.includes(input) || category.includes(input)) {
+                    book.style.display = "block";
+                } else {
+                    book.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+    <!-- CSS -->
+    <style>
+        #search-section {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        #searchInput {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #1E3A8A;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </body>
 </html>
