@@ -21,6 +21,7 @@ nav {
     justify-content: center;
     background-color: #375AAB;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav .button {
@@ -58,7 +59,8 @@ h2 {
 
 table {
     border-collapse: collapse;
-    width: 60%;
+    width: 100%;
+    max-width: 600px;
     margin: 20px auto;
     background: #FAF0E6;
     border: 1px solid #1E3A8A;
@@ -96,7 +98,8 @@ ul li a:hover {
 form {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
+    max-width: 500px;
     margin: 20px auto;
     padding: 25px;
     background: #FFFFFF;
@@ -156,4 +159,21 @@ footer {
     padding: 15px;
     margin-top: 20px;
     font-size: 14px;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    form {
+        width: 90%;
+    }
 }
