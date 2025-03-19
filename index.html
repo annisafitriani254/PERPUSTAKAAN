@@ -51,47 +51,11 @@
             </div>
         </div>
     </section>
-
+<!-- Menyisipkan script.js -->
+    <script src="script.js"></script>
     <footer>
         <p>© 2025 Annisa Fitriani</p>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        function searchBooks() {
-            let input = document.getElementById("searchInput").value.toLowerCase();
-            let books = document.querySelectorAll(".book");
-
-            books.forEach(book => {
-                let title = book.getAttribute("data-title").toLowerCase();
-                let author = book.getAttribute("data-author").toLowerCase();
-                let category = book.getAttribute("data-category").toLowerCase();
-
-                if (title.includes(input) || author.includes(input) || category.includes(input)) {
-                    book.style.display = "block";
-                } else {
-                    book.style.display = "none";
-                }
-            });
-        }
-    </script>
-
-    <!-- CSS -->
-    <style>
-        #search-section {
-            text-align: center;
-            margin: 20px auto;
-        }
-
-        #searchInput {
-            width: 80%;
-            padding: 10px;
-            border: 1px solid #1E3A8A;
-            border-radius: 5px;
-            font-size: 16px;
-            display: block;
-            margin: 0 auto;
-        }
     </style>
 </body>
 </html>
