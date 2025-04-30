@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Kunjungan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulir Kunjungan Perpustakaan Annisa</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Saya</a>
+            <a href="tabel.html">Tabel Perkalian</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+
+            <label for="nim">NIM/NIS:</label><br>
+            <input type="text" id="nim" name="nim" required><br><br>
+
+            <label for="instansi">Asal Instansi:</label><br>
+            <input type="text" id="instansi" name="instansi" required><br><br>
+
+            <label for="tujuan">Tujuan Kunjungan:</label><br>
+            <select id="tujuan" name="tujuan" required>
+                <option value="">-- Pilih --</option>
+                <option value="membaca">Membaca Buku</option>
+                <option value="mengerjakan tugas">Mengerjakan Tugas</option>
+                <option value="mencari referensi">Mencari Referensi</option>
+            </select><br><br>
+
+            <label for="tanggal">Tanggal Kunjungan:</label><br>
+            <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+            <input type="submit" value="Kirim">
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Annisa Fitriani</p>
+    </footer>
+</body>
+</html>
