@@ -21,6 +21,7 @@ nav {
     justify-content: center;
     background-color: #375AAB;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav .button {
@@ -51,9 +52,11 @@ h2 {
     color: #1E3A8A;
 }
 
+/* Untuk Halaman Tabel Perkalian */
 .table-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 table {
@@ -68,7 +71,7 @@ table {
 th, td {
     padding: 12px;
     border: 1px solid #1E3A8A;
-    text-align: left;
+    text-align: center;
 }
 
 th {
@@ -93,6 +96,7 @@ ul li a:hover {
     text-decoration: underline;
 }
 
+/* Untuk Halaman Formulir Kunjungan */
 form {
     display: flex;
     flex-direction: column;
@@ -156,4 +160,34 @@ footer {
     padding: 15px;
     margin-top: 20px;
     font-size: 14px;
+}
+
+/* 🌐 Tambahan: Media Query untuk Responsif Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .button {
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    main, form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
 }
