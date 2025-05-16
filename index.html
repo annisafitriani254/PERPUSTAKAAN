@@ -12,7 +12,7 @@
         <nav>
             <a href="about.html" class="button">About Me</a>
             <a href="contact-us.html" class="button">Hubungi Kami</a>
-            <a href="tabel.html" class="button">Tabel Perkalian</a> <!-- tabel.html -->
+            <a href="tabel.html" class="button">Tabel Perkalian</a>
             <a href="formulir.html" class="button">Formulir Kunjungan</a>
         </nav>
     </header>
@@ -53,28 +53,66 @@
             </div>
         </div>
     </section>
-        <h2>Event Kegiatan</h2>
-<div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
-    <div style="display: flex; align-items: center;">
-        <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
-        <div>
-            <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
-            <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
-            <p><em>Lokasi: Perpustakaan UMS</em></p>
-            <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS dalam rangka meningkatkan kompetensi, kualitas publikasi, dan kebermanfaatan sumber referensi.</p>
-            <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
-      <p style="margin-top: 10px;">
-        📱 <strong>Hubungi via WhatsApp:</strong> 
-        <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
-      </p>
-                </div>
+
+    <h2>Event Kegiatan</h2>
+    <div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
+        <div style="display: flex; align-items: center;">
+            <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
+            <div>
+                <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
+                <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
+                <p><em>Lokasi: Perpustakaan UMS</em></p>
+                <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS dalam rangka meningkatkan kompetensi, kualitas publikasi, dan kebermanfaatan sumber referensi.</p>
+                <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
+                <p style="margin-top: 10px;">
+                    📱 <strong>Hubungi via WhatsApp:</strong> 
+                    <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
+                </p>
             </div>
         </div>
-<!-- Menyisipkan script.js -->
+    </div>
+
+    <!-- Script Cookie: Tambahkan di bawah sebelum </body> -->
+    <script>
+        function setCookie(nama, nilai, hariKadaluarsa) {
+            const d = new Date();
+            d.setTime(d.getTime() + (hariKadaluarsa * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = nama + "=" + nilai + ";" + expires + ";path=/";
+        }
+
+        function getCookie(nama) {
+            let namaEQ = nama + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(namaEQ) === 0) {
+                    return c.substring(namaEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        window.onload = function () {
+            let pengguna = getCookie("pengunjung");
+            if (pengguna !== "") {
+                alert("Selamat datang kembali di Perpustakaan Annisa, " + pengguna + "!");
+            } else {
+                let nama = prompt("Selamat datang! Siapa nama Anda?");
+                if (nama !== "" && nama !== null) {
+                    setCookie("pengunjung", nama, 7); // Simpan selama 7 hari
+                    alert("Halo " + nama + ", selamat datang di Perpustakaan Annisa!");
+                }
+            }
+        };
+    </script>
+
+    <!-- Menyisipkan file JS utama -->
     <script src="script.js"></script>
+
     <footer>
         <p>© 2025 Annisa Fitriani</p>
     </footer>
-    </style>
 </body>
 </html>
