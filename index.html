@@ -1,130 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perpustakaan ANNISA</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan ANNISA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>PERPUSTAKAAN ANNISA</h1>
+        <nav>
+            <a href="about.html" class="button">About Me</a>
+            <a href="contact-us.html" class="button">Hubungi Kami</a>
+            <a href="tabel.html" class="button">Tabel Perkalian</a>
+            <a href="formulir.html" class="button">Formulir Kunjungan</a>
+        </nav>
+    </header>
 
-  <header>
-    <h1>PERPUSTAKAAN ANNISA</h1>
-    <nav>
-      <a href="about.html" class="button">About Me</a>
-      <a href="contact-us.html" class="button">Hubungi Kami</a>
-      <a href="tabel.html" class="button">Tabel Perkalian</a>
-      <a href="formulir.html" class="button">Formulir Kunjungan</a>
-    </nav>
-  </header>
-  
-  <main>
-    <h2>Selamat Datang di Perpustakaan Annisa!</h2>
-    <div class="gif-container">
-      <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif">
-    </div>
-    <p>
-      "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi..."
-    </p>
-    <h3>Kerja Sama dan Referensi</h3>
-    <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
-  </main>
-
-  <!-- Search Bar -->
-  <section id="search-section">
-    <h2>Cari Buku</h2>
-    <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()">
-  </section>
-
-  <!-- Rekomendasi Buku -->
-  <section id="rekomendasi-buku">
-    <h2>Rekomendasi Buku</h2>
-    <div class="container" id="bookList">
-      <!-- Buku 1 -->
-      <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
-        <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
-          <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
-        </a>
-        <p>Empat Langkah Pengampunan</p>
-      </div>
-      <!-- Buku 2 -->
-      <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
-        <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
-          <img src="B023.png" alt="Islam’s Reformers">
-        </a>
-        <p>Islam’s Reformers</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Event -->
-  <h2>Event Kegiatan</h2>
-  <div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
-    <div style="display: flex; align-items: center;">
-      <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
-      <div>
-        <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
-        <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
-        <p><em>Lokasi: Perpustakaan UMS</em></p>
-        <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS...</p>
-        <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
-        <p style="margin-top: 10px;">
-          📱 <strong>Hubungi via WhatsApp:</strong> 
-          <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
+    <main>
+        <h2>Selamat Datang di Perpustakaan Annisa!</h2>
+        <div class="gif-container">
+            <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif">
+        </div>
+        <p>
+            "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik."
         </p>
+        <h3>Kerja Sama dan Referensi</h3>
+        <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
+    </main>
+
+    <!-- Search Bar -->
+    <section id="search-section">
+        <h2>Cari Buku</h2>
+        <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()">
+    </section>
+
+    <!-- Rekomendasi Buku -->
+    <section id="rekomendasi-buku">
+        <h2>Rekomendasi Buku</h2>
+        <div class="container" id="bookList">
+            <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
+                <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
+                    <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
+                </a>
+                <p>Empat Langkah Pengampunan</p>
+            </div>
+            <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
+                <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
+                    <img src="B023.png" alt="Islam’s Reformers">
+                </a>
+                <p>Islam’s Reformers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event -->
+    <h2>Event Kegiatan</h2>
+    <div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
+        <div style="display: flex; align-items: center;">
+            <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
+            <div>
+                <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
+                <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
+                <p><em>Lokasi: Perpustakaan UMS</em></p>
+                <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS untuk meningkatkan kompetensi, kualitas publikasi, dan kebermanfaatan referensi.</p>
+                <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
+                <p style="margin-top: 10px;">
+                    📱 <strong>Hubungi via WhatsApp:</strong> 
+                    <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Annisa Fitriani</p>
+    </footer>
+
+    <!-- SCRIPT JS UTAMA -->
+    <script src="script.js"></script>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookie-consent-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #1e2a38; color: white; padding: 20px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif;">
+      <div style="display: flex; align-items: center; gap: 15px; flex: 1; min-width: 300px;">
+        <div style="font-size: 24px;">🍪</div>
+        <div>
+          <strong>Kami menggunakan file cookie</strong><br>
+          Kami mengaktifkan semua cookie secara default untuk memastikan fungsionalitas situs kami, iklan, dan analitik sesuai <a href="#" style="color: #4dc3ff; text-decoration: underline;">Kebijakan Privasi</a>.
+        </div>
+      </div>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button onclick="openCookieSettings()" style="background-color: #2f3e52; border: none; color: white; padding: 10px 16px; border-radius: 6px; cursor: pointer;">
+          Setelan
+        </button>
+        <button onclick="acceptAllCookies()" style="background-color: #00aaff; border: none; color: white; padding: 10px 16px; border-radius: 6px; cursor: pointer;">
+          Terima Semua
+        </button>
       </div>
     </div>
-  </div>
 
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 600px; margin: auto; background: #1e2a38; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 9999; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <span style="text-align: center;">
-      🍪 Situs ini menggunakan cookie untuk meningkatkan pengalaman pengguna. Dengan menggunakan situs ini, Anda menyetujui penggunaan cookie kami.
-    </span>
-    <button onclick="acceptCookies()" style="background-color: #00aaff; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s;">
-      Saya Setuju
-    </button>
-  </div>
+    <!-- Modal Cookie Settings -->
+    <div id="cookie-settings-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; color: black; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.3); z-index: 10000; max-width: 400px; font-family: 'Segoe UI', sans-serif;">
+      <h3>Setelan Cookie</h3>
+      <p>Silakan pilih jenis cookie yang ingin Anda aktifkan:</p>
+      <label><input type="checkbox" checked disabled> Cookie Fungsional (wajib)</label><br>
+      <label><input type="checkbox" id="ads-cookies" checked> Cookie Iklan</label><br>
+      <label><input type="checkbox" id="analytics-cookies" checked> Cookie Analitik</label><br><br>
+      <button onclick="saveCookieSettings()" style="background-color: #00aaff; color: white; padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer;">Simpan</button>
+      <button onclick="closeCookieSettings()" style="margin-left: 10px; background-color: gray; color: white; padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer;">Batal</button>
+    </div>
 
-  <!-- Cookie Script -->
-  <script>
-    function setCookie(name, value, days) {
-      const d = new Date();
-      d.setTime(d.getTime() + (days*24*60*60*1000));
-      const expires = "expires=" + d.toUTCString();
-      document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-      const cname = name + "=";
-      const decodedCookie = decodeURIComponent(document.cookie);
-      const ca = decodedCookie.split(';');
-      for(let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim();
-        if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+    <!-- Script Cookie -->
+    <script>
+      function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
       }
-      return "";
-    }
 
-    function acceptCookies() {
-      setCookie("cookieConsent", "true", 30);
-      document.getElementById("cookie-banner").style.display = "none";
-    }
-
-    window.onload = function () {
-      if (getCookie("cookieConsent") === "true") {
-        document.getElementById("cookie-banner").style.display = "none";
+      function getCookie(name) {
+        const cname = name + "=";
+        const ca = document.cookie.split(';');
+        for(let c of ca) {
+          c = c.trim();
+          if (c.indexOf(cname) === 0) return c.substring(cname.length);
+        }
+        return "";
       }
-    };
-  </script>
 
-  <!-- JS Utama -->
-  <script src="script.js"></script>
+      function acceptAllCookies() {
+        setCookie("cookieConsent", "all", 30);
+        document.getElementById("cookie-consent-banner").style.display = "none";
+      }
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Annisa Fitriani</p>
-  </footer>
+      function openCookieSettings() {
+        document.getElementById("cookie-settings-modal").style.display = "block";
+      }
 
+      function closeCookieSettings() {
+        document.getElementById("cookie-settings-modal").style.display = "none";
+      }
+
+      function saveCookieSettings() {
+        const ads = document.getElementById("ads-cookies").checked;
+        const analytics = document.getElementById("analytics-cookies").checked;
+        setCookie("cookieConsent", JSON.stringify({ads, analytics}), 30);
+        document.getElementById("cookie-consent-banner").style.display = "none";
+        closeCookieSettings();
+      }
+
+      window.onload = function () {
+        const cookie = getCookie("cookieConsent");
+        if (cookie) {
+          document.getElementById("cookie-consent-banner").style.display = "none";
+        }
+      }
+    </script>
 </body>
 </html>
