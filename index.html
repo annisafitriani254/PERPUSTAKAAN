@@ -12,7 +12,7 @@
         <nav>
             <a href="about.html" class="button">About Me</a>
             <a href="contact-us.html" class="button">Hubungi Kami</a>
-            <a href="tabel.html" class="button">Tabel Perkalian</a>
+            <a href="tabel.html" class="button">Tabel Perkalian</a> <!-- tabel.html -->
             <a href="formulir.html" class="button">Formulir Kunjungan</a>
         </nav>
     </header>
@@ -23,13 +23,13 @@
             <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif">
         </div>
         <p>
-            "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik."
+            "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik. Kami percaya bahwa pengetahuan adalah kunci utama untuk membuka peluang masa depan yang lebih cerah. Semoga Anda menemukan manfaat dari setiap informasi yang tersedia di sini!"
         </p>
         <h3>Kerja Sama dan Referensi</h3>
         <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
     </main>
 
-    <!-- Pencarian -->
+    <!-- Search Bar -->
     <section id="search-section">
         <h2>Cari Buku</h2>
         <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()">
@@ -40,93 +40,41 @@
         <h2>Rekomendasi Buku</h2>
         <div class="container" id="bookList">
             <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
-                <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view" target="_blank">
+                <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
                     <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
                 </a>
                 <p>Empat Langkah Pengampunan</p>
             </div>
             <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
-                <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-" target="_blank">
+                <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
                     <img src="B023.png" alt="Islam’s Reformers">
                 </a>
                 <p>Islam’s Reformers</p>
             </div>
         </div>
     </section>
-
-    <h2>Event Kegiatan</h2>
-    <div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
-        <div style="display: flex; align-items: center;">
-            <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
-            <div>
-                <h2 style="color: #3366ff;">Library Literacy Fest</h2>
-                <p><strong>Tanggal:</strong> 29 November–19 Desember 2024</p>
-                <p><em>Lokasi: Perpustakaan UMS</em></p>
-                <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS untuk meningkatkan kompetensi dan kualitas publikasi.</p>
-                <a href="#" style="background-color: #3366ff; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
-                <p style="margin-top: 10px;">📱 <strong>WhatsApp:</strong> 
-                    <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
-                </p>
+        <h2>Event Kegiatan</h2>
+<div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
+    <div style="display: flex; align-items: center;">
+        <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
+        <div>
+            <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
+            <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
+            <p><em>Lokasi: Perpustakaan UMS</em></p>
+            <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS dalam rangka meningkatkan kompetensi, kualitas publikasi, dan kebermanfaatan sumber referensi.</p>
+            <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
+      <p style="margin-top: 10px;">
+        📱 <strong>Hubungi via WhatsApp:</strong> 
+        <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
+      </p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Script Cookie -->
-    <script>
-    function setCookie(name, value, days) {
-        const d = new Date();
-        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + d.toUTCString();
-        document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-        const cname = name + "=";
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i].trim();
-            if (c.indexOf(cname) === 0) {
-                return c.substring(cname.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    function checkCookies() {
-        let user = getCookie("username");
-        let visits = getCookie("visits");
-        let lastVisit = getCookie("lastVisit");
-
-        const now = new Date();
-        const nowString = now.toLocaleString();
-
-        if (!user) {
-            user = prompt("Selamat datang! Masukkan nama Anda:");
-            if (user) {
-                setCookie("username", user, 30);
-                visits = 1;
-            }
-        } else {
-            visits = parseInt(visits) + 1;
-            alert("Selamat datang kembali, " + user + "!\nIni kunjungan Anda yang ke-" + visits + 
-                  "\nTerakhir kali Anda berkunjung: " + lastVisit);
-        }
-
-        // Set/update cookies
-        setCookie("username", user, 30);
-        setCookie("visits", visits, 30);
-        setCookie("lastVisit", nowString, 30);
-    }
-
-    window.onload = checkCookies;
-    </script>
-
-    <!-- Script.js (pencarian) -->
+<!-- Menyisipkan script.js -->
     <script src="script.js"></script>
-
     <footer>
         <p>© 2025 Annisa Fitriani</p>
     </footer>
+    </style>
 </body>
 </html>
