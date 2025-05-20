@@ -21,3 +21,110 @@
   <main>
     <h2>Selamat Datang di Perpustakaan Annisa!</h2>
     <div class="gif-container">
+      <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif">
+    </div>
+    <p>
+      "Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi..."
+    </p>
+    <h3>Kerja Sama dan Referensi</h3>
+    <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
+  </main>
+
+  <!-- Search Bar -->
+  <section id="search-section">
+    <h2>Cari Buku</h2>
+    <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()">
+  </section>
+
+  <!-- Rekomendasi Buku -->
+  <section id="rekomendasi-buku">
+    <h2>Rekomendasi Buku</h2>
+    <div class="container" id="bookList">
+      <!-- Buku 1 -->
+      <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
+        <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
+          <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan">
+        </a>
+        <p>Empat Langkah Pengampunan</p>
+      </div>
+      <!-- Buku 2 -->
+      <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
+        <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
+          <img src="B023.png" alt="Islam’s Reformers">
+        </a>
+        <p>Islam’s Reformers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event -->
+  <h2>Event Kegiatan</h2>
+  <div style="background-color: #FFFDD0; padding: 20px; border-radius: 12px; margin: 20px;">
+    <div style="display: flex; align-items: center;">
+      <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" style="width: 180px; height: auto; border-radius: 8px; margin-right: 20px;">
+      <div>
+        <h2 style="color: #3366ff; margin-bottom: 5px;">Library Literacy Fest</h2>
+        <p><strong style="color: black;">Tanggal:</strong> 29 November-19 Desember 2024</p>
+        <p><em>Lokasi: Perpustakaan UMS</em></p>
+        <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS...</p>
+        <a href="#" style="background-color: #3366ff; color: #f0f8ff; padding: 8px 16px; border-radius: 6px; text-decoration: none;">Info Selengkapnya</a>
+        <p style="margin-top: 10px;">
+          📱 <strong>Hubungi via WhatsApp:</strong> 
+          <a href="https://wa.me/628122605573" target="_blank" style="color: green; text-decoration: none;">+62 812-3456-7890</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 600px; margin: auto; background: #1e2a38; color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 9999; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <span style="text-align: center;">
+      🍪 Situs ini menggunakan cookie untuk meningkatkan pengalaman pengguna. Dengan menggunakan situs ini, Anda menyetujui penggunaan cookie kami.
+    </span>
+    <button onclick="acceptCookies()" style="background-color: #00aaff; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s;">
+      Saya Setuju
+    </button>
+  </div>
+
+  <!-- Cookie Script -->
+  <script>
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days*24*60*60*1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+      const cname = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+      }
+      return "";
+    }
+
+    function acceptCookies() {
+      setCookie("cookieConsent", "true", 30);
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+
+    window.onload = function () {
+      if (getCookie("cookieConsent") === "true") {
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+    };
+  </script>
+
+  <!-- JS Utama -->
+  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Annisa Fitriani</p>
+  </footer>
+
+</body>
+</html>
