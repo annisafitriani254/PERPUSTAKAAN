@@ -72,45 +72,46 @@
         </div>
     </div>
 
-    <!-- Script Cookie: Tambahkan di bawah sebelum </body> -->
+    <!-- Cookie Script -->
     <script>
-        function setCookie(nama, nilai, hariKadaluarsa) {
-            const d = new Date();
-            d.setTime(d.getTime() + (hariKadaluarsa * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = nama + "=" + nilai + ";" + expires + ";path=/";
-        }
+      function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
 
-        function getCookie(nama) {
-            let namaEQ = nama + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i].trim();
-                if (c.indexOf(namaEQ) === 0) {
-                    return c.substring(namaEQ.length, c.length);
-                }
-            }
-            return "";
+      function getCookie(name) {
+        const cname = name + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i].trim();
+          if (c.indexOf(cname) === 0) {
+            return c.substring(cname.length, c.length);
+          }
         }
+        return "";
+      }
 
-        window.onload = function () {
-            let pengguna = getCookie("pengunjung");
-            if (pengguna !== "") {
-                alert("Selamat datang kembali di Perpustakaan Annisa, " + pengguna + "!");
-            } else {
-                let nama = prompt("Selamat datang! Siapa nama Anda?");
-                if (nama !== "" && nama !== null) {
-                    setCookie("pengunjung", nama, 7); // Simpan selama 7 hari
-                    alert("Halo " + nama + ", selamat datang di Perpustakaan Annisa!");
-                }
-            }
-        };
+      function checkCookie() {
+        const username = getCookie("username");
+        if (username !== "") {
+          alert("Selamat datang kembali, " + username + "!");
+        } else {
+          const name = prompt("Masukkan nama Anda:");
+          if (name !== "" && name !== null) {
+            setCookie("username", name, 30);
+          }
+        }
+      }
+
+      window.onload = checkCookie;
     </script>
 
-    <!-- Menyisipkan file JS utama -->
+    <!-- Menyisipkan script.js -->
     <script src="script.js"></script>
-
+    
     <footer>
         <p>© 2025 Annisa Fitriani</p>
     </footer>
