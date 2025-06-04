@@ -1,164 +1,537 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perpustakaan Annisa | Sumber Literasi Digital & Referensi Akademik</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perpustakaan ANNISA</title>
+    <style>
+        /* Reset dan dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f9faff;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: #3366ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #3366ff, #00aaff);
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav .button {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        nav .button:hover {
+            background: white;
+            color: #3366ff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Main content */
+        main {
+            flex-grow: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        main h2 {
+            color: #3366ff;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+        .gif-container {
+            margin-bottom: 20px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(51, 102, 255, 0.2);
+            display: inline-block;
+        }
+        .responsive-gif {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        main p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        main a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #3366ff;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(51, 102, 255, 0.4);
+            transition: background-color 0.3s ease;
+        }
+        main a:hover {
+            background-color: #1a3ebf;
+        }
+
+        /* Search section */
+        #search-section {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        #search-section h2 {
+            color: #3366ff;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 30px;
+            border: 2px solid #3366ff;
+            font-size: 1rem;
+            outline-color: #3366ff;
+            transition: border-color 0.3s ease;
+        }
+        #searchInput:focus {
+            border-color: #00aaff;
+            box-shadow: 0 0 8px #00aaff;
+        }
+
+        /* Rekomendasi Buku */
+        #rekomendasi-buku {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        #rekomendasi-buku h2 {
+            color: #3366ff;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .book {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            width: 160px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .book:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .book img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(51, 102, 255, 0.15);
+        }
+        .book p {
+            font-weight: 600;
+            color: #222;
+            font-size: 1rem;
+        }
+
+        /* Event */
+        h2 + div {
+            max-width: 900px;
+            margin: 40px auto 60px;
+            background-color: #fffdd0;
+            border-radius: 15px;
+            padding: 20px 25px;
+            box-shadow: 0 5px 20px rgba(51, 102, 255, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+        h2 + div img {
+            width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(51, 102, 255, 0.3);
+        }
+        h2 + div div {
+            flex: 1;
+            min-width: 220px;
+        }
+        h2 + div h2 {
+            color: #3366ff;
+            margin-bottom: 8px;
+            font-size: 1.8rem;
+        }
+        h2 + div p {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        h2 + div a {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 22px;
+            background-color: #3366ff;
+            color: #f0f8ff;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(51, 102, 255, 0.5);
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        h2 + div a:hover {
+            background-color: #254eda;
+        }
+        h2 + div p strong {
+            color: black;
+        }
+        h2 + div p a {
+            color: #2ea44f;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2a38;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Cookie Banner */
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background-color: #1e2a38;
+            color: white;
+            padding: 18px 30px;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-family: 'Segoe UI', sans-serif;
+            gap: 20px;
+        }
+        #cookie-consent-banner div:first-child {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+            min-width: 300px;
+        }
+        #cookie-consent-banner div:first-child div {
+            font-size: 24px;
+        }
+        #cookie-consent-banner a {
+            color: #4dc3ff;
+            text-decoration: underline;
+        }
+        #cookie-consent-banner button {
+            background-color: #00aaff;
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        #cookie-consent-banner button:hover {
+            background-color: #007bbf;
+        }
+        #cookie-consent-banner button:nth-child(1) {
+            background-color: #2f3e52;
+            margin-right: 10px;
+        }
+        #cookie-consent-banner button:nth-child(1):hover {
+            background-color: #25354b;
+        }
+
+        /* Modal */
+        #cookie-settings-modal {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            color: black;
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            z-index: 10000;
+            max-width: 420px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        #cookie-settings-modal h3 {
+            margin-bottom: 15px;
+            color: #3366ff;
+        }
+        #cookie-settings-modal p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        #cookie-settings-modal label {
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        #cookie-settings-modal input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        #cookie-settings-modal button {
+            background-color: #00aaff;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        #cookie-settings-modal button:hover {
+            background-color: #007bbf;
+        }
+        #cookie-settings-modal button:nth-child(4) {
+            margin-left: 12px;
+            background-color: #888;
+        }
+        #cookie-settings-modal button:nth-child(4):hover {
+            background-color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            nav {
+                flex-direction: column;
+            }
+            nav .button {
+                width: 100%;
+                text-align: center;
+            }
+            main, #rekomendasi-buku, #search-section {
+                margin: 30px 15px;
+            }
+            h2 + div {
+                flex-direction: column;
+                text-align: center;
+            }
+            h2 + div img {
+                margin: 0 auto;
+                width: 80%;
+                max-width: 300px;
+            }
+            h2 + div div {
+                min-width: auto;
+            }
+            #cookie-consent-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            #cookie-consent-banner div:first-child {
+                min-width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container-header">
-      <h1>📚 Perpustakaan Annisa</h1>
-      <nav class="nav-bar">
-        <a href="about.html" class="button" aria-label="Tentang Saya">Tentang Saya</a>
-        <a href="contact-us.html" class="button" aria-label="Hubungi Kami">Hubungi Kami</a>
-        <a href="tabel.php" class="button" aria-label="Tabel Perkalian">Tabel Perkalian</a>
-        <a href="formulir.html" class="button" aria-label="Formulir Kunjungan">Formulir Kunjungan</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <h1>PERPUSTAKAAN ANNISA</h1>
+        <nav>
+            <a href="about.html" class="button">About Me</a>
+            <a href="contact-us.html" class="button">Hubungi Kami</a>
+            <a href="tabel.php" class="button">Tabel Perkalian</a>
+            <a href="formulir.html" class="button">Formulir Kunjungan</a>
+        </nav>
+    </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
+    <main>
         <h2>Selamat Datang di Perpustakaan Annisa!</h2>
-        <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Animasi Perpustakaan" class="responsive-gif" />
+        <div class="gif-container">
+            <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Perpustakaan Annisa" class="responsive-gif" />
+        </div>
         <p>
-          Perpustakaan Annisa adalah pusat referensi dan literasi digital yang mendukung aktivitas akademik dan penelitian. Kami menyediakan akses ke berbagai sumber ilmiah, koleksi buku elektronik, serta informasi kegiatan literasi terkini.
+            Selamat datang di Perpustakaan Annisa! Sebagai bagian dari upaya pengembangan ilmu dan pendidikan, perpustakaan ini hadir untuk memberikan berbagai sumber referensi yang dapat mendukung pembelajaran, penelitian, dan eksplorasi akademik.
         </p>
-      </div>
+        <h3>Kerja Sama dan Referensi</h3>
+        <a href="http://pustaka.unp.ac.id/kki/" target="_blank" rel="noopener noreferrer">Perpustakaan Universitas Negeri Padang</a>
+    </main>
+
+    <!-- Search Bar -->
+    <section id="search-section">
+        <h2>Cari Buku</h2>
+        <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()" />
     </section>
 
-    <!-- Partner Section -->
-    <section class="section-light">
-      <h3>Kerja Sama & Referensi</h3>
-      <p><a href="http://pustaka.unp.ac.id/kki/" target="_blank" rel="noopener noreferrer">🌐 Perpustakaan Universitas Negeri Padang</a></p>
-    </section>
-
-    <!-- Search Book Section -->
-    <section id="search-section" class="section-dark">
-      <h2>Cari Buku Digital</h2>
-      <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()" aria-label="Pencarian Buku" />
-    </section>
-
-    <!-- Recommended Books -->
-    <section id="rekomendasi-buku" class="section-light">
-      <h2>📖 Rekomendasi Buku Pilihan</h2>
-      <div class="book-grid" id="bookList">
-        <div class="book-card" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
-          <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-            <img src="tn_4stepscover-indonesian.jpg" alt="Sampul Buku Empat Langkah Pengampunan" />
-          </a>
-          <p><strong>Empat Langkah Pengampunan</strong></p>
+    <!-- Rekomendasi Buku -->
+    <section id="rekomendasi-buku">
+        <h2>Rekomendasi Buku</h2>
+        <div class="container" id="bookList">
+            <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
+                <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <img src="tn_4stepscover-indonesian.jpg" alt="Empat Langkah Pengampunan" />
+                </a>
+                <p>Empat Langkah Pengampunan</p>
+            </div>
+            <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
+                <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <img src="B023.png" alt="Islam’s Reformers" />
+                </a>
+                <p>Islam’s Reformers</p>
+            </div>
         </div>
-        <div class="book-card" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
-          <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-            <img src="B023.png" alt="Sampul Buku Islam’s Reformers" />
-          </a>
-          <p><strong>Islam’s Reformers</strong></p>
-        </div>
-      </div>
     </section>
 
-    <!-- Events -->
-    <section class="section-dark">
-      <h2>🗓️ Agenda Kegiatan Literasi</h2>
-      <div class="event-card">
-        <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Poster Library Literacy Fest" class="event-image" />
-        <div class="event-info">
-          <h3>Library Literacy Fest 2024</h3>
-          <p><strong>Tanggal:</strong> 29 November – 19 Desember 2024</p>
-          <p><strong>Lokasi:</strong> Perpustakaan UMS</p>
-          <p>Kegiatan ini bertujuan meningkatkan literasi publikasi dan penggunaan referensi digital secara luas.</p>
-          <a href="#" class="event-button">Info Selengkapnya</a>
-          <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/628122605573" target="_blank" rel="noopener noreferrer">+62 812-2605-573</a></p>
+    <!-- Event -->
+    <h2>Event Kegiatan</h2>
+    <div>
+        <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Library Literacy Fest" />
+        <div>
+            <h2>Library Literacy Fest</h2>
+            <p><strong>Tanggal:</strong> 29 November-19 Desember 2024</p>
+            <p><em>Lokasi: Perpustakaan UMS</em></p>
+            <p>Library Literacy Fest diadakan oleh Perpustakaan dan Pusat Layanan Digital UMS untuk meningkatkan kompetensi, kualitas publikasi, dan kebermanfaatan referensi.</p>
+            <a href="#" aria-label="Info Selengkapnya tentang Library Literacy Fest">Info Selengkapnya</a>
+            <p style="margin-top: 10px;">
+                📱 <strong>Hubungi via WhatsApp:</strong>
+                <a href="https://wa.me/628122605573" target="_blank" rel="noopener noreferrer" style="color: #2ea44f;">+62 812-3456-7890</a>
+            </p>
         </div>
-      </div>
-    </section>
-  </main>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Annisa Fitriani | Perpustakaan Digital Mahasiswa</p>
-  </footer>
+    <footer>
+        <p>© 2025 Annisa Fitriani</p>
+    </footer>
 
-  <!-- Script JS -->
-  <script src="script.js"></script>
+    <!-- SCRIPT JS UTAMA -->
+    <script src="script.js"></script>
 
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-consent-banner" class="cookie-banner">
-    <div class="cookie-content">
-      <span class="cookie-icon">🍪</span>
+    <!-- COOKIE BANNER -->
+    <div id="cookie-consent-banner" aria-live="polite" role="region" aria-label="Cookie consent banner">
       <div>
-        <strong>Kami menggunakan cookie</strong><br>
-        Cookie digunakan untuk fungsionalitas, iklan, dan analitik. Lihat <a href="#" class="cookie-link">Kebijakan Privasi</a>.
+        <div>🍪</div>
+        <div>
+          <strong>Kami menggunakan file cookie</strong><br />
+          Kami mengaktifkan semua cookie secara default untuk memastikan fungsionalitas situs kami, iklan, dan analitik sesuai <a href="#" aria-label="Kebijakan Privasi">Kebijakan Privasi</a>.
+        </div>
+      </div>
+      <div>
+        <button onclick="openCookieSettings()" aria-label="Buka setelan cookie">Setelan</button>
+        <button onclick="acceptAllCookies()" aria-label="Terima semua cookie">Terima Semua</button>
       </div>
     </div>
-    <div class="cookie-buttons">
-      <button onclick="openCookieSettings()">Setelan</button>
-      <button onclick="acceptAllCookies()">Terima Semua</button>
+
+    <!-- Modal Cookie Settings -->
+    <div id="cookie-settings-modal" role="dialog" aria-modal="true" aria-labelledby="cookieSettingsTitle" aria-hidden="true">
+      <h3 id="cookieSettingsTitle">Setelan Cookie</h3>
+      <p>Silakan pilih jenis cookie yang ingin Anda aktifkan:</p>
+      <label><input type="checkbox" checked disabled> Cookie Fungsional (wajib)</label><br />
+      <label><input type="checkbox" id="ads-cookies" checked> Cookie Iklan</label><br />
+      <label><input type="checkbox" id="analytics-cookies" checked> Cookie Analitik</label><br />
+      <button onclick="saveCookieSettings()" aria-label="Simpan setelan cookie">Simpan</button>
+      <button onclick="closeCookieSettings()" aria-label="Tutup setelan cookie">Batal</button>
     </div>
-  </div>
 
-  <!-- Modal Cookie Settings -->
-  <div id="cookie-settings-modal" class="cookie-modal">
-    <h3>Setelan Cookie</h3>
-    <p>Silakan pilih preferensi cookie Anda:</p>
-    <label><input type="checkbox" checked disabled> Cookie Fungsional (Wajib)</label><br>
-    <label><input type="checkbox" id="ads-cookies" checked> Cookie Iklan</label><br>
-    <label><input type="checkbox" id="analytics-cookies" checked> Cookie Analitik</label><br><br>
-    <button onclick="saveCookieSettings()">Simpan</button>
-    <button onclick="closeCookieSettings()">Batal</button>
-  </div>
-
-  <!-- Script Cookie -->
-  <script>
-    function setCookie(name, value, days) {
-      const d = new Date();
-      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-      document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
-    }
-
-    function getCookie(name) {
-      const cname = name + "=";
-      const ca = document.cookie.split(';');
-      for (let c of ca) {
-        c = c.trim();
-        if (c.indexOf(cname) === 0) return c.substring(cname.length);
+    <script>
+      // Fungsi untuk filter pencarian buku sederhana
+      function searchBooks() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const books = document.querySelectorAll('#bookList .book');
+        books.forEach(book => {
+          const title = book.getAttribute('data-title').toLowerCase();
+          const author = book.getAttribute('data-author').toLowerCase();
+          const category = book.getAttribute('data-category').toLowerCase();
+          if (title.includes(input) || author.includes(input) || category.includes(input)) {
+            book.style.display = 'block';
+          } else {
+            book.style.display = 'none';
+          }
+        });
       }
-      return "";
-    }
 
-    function acceptAllCookies() {
-      setCookie("cookieConsent", "all", 30);
-      document.getElementById("cookie-consent-banner").style.display = "none";
-    }
+      // Cookie Consent Banner
+      const cookieBanner = document.getElementById('cookie-consent-banner');
+      const cookieModal = document.getElementById('cookie-settings-modal');
 
-    function openCookieSettings() {
-      document.getElementById("cookie-settings-modal").style.display = "block";
-    }
-
-    function closeCookieSettings() {
-      document.getElementById("cookie-settings-modal").style.display = "none";
-    }
-
-    function saveCookieSettings() {
-      const ads = document.getElementById("ads-cookies").checked;
-      const analytics = document.getElementById("analytics-cookies").checked;
-      setCookie("cookieConsent", JSON.stringify({ ads, analytics }), 30);
-      document.getElementById("cookie-consent-banner").style.display = "none";
-      closeCookieSettings();
-    }
-
-    window.onload = function () {
-      if (getCookie("cookieConsent")) {
-        document.getElementById("cookie-consent-banner").style.display = "none";
+      function openCookieSettings() {
+        cookieModal.style.display = 'block';
+        cookieModal.setAttribute('aria-hidden', 'false');
       }
-    };
-  </script>
+      function closeCookieSettings() {
+        cookieModal.style.display = 'none';
+        cookieModal.setAttribute('aria-hidden', 'true');
+      }
+      function acceptAllCookies() {
+        // Simpan pilihan semua cookie diterima (misal di localStorage)
+        localStorage.setItem('cookiesAccepted', 'all');
+        cookieBanner.style.display = 'none';
+      }
+      function saveCookieSettings() {
+        // Simpan preferensi cookie sesuai checkbox
+        const ads = document.getElementById('ads-cookies').checked;
+        const analytics = document.getElementById('analytics-cookies').checked;
+        localStorage.setItem('cookieAds', ads);
+        localStorage.setItem('cookieAnalytics', analytics);
+        cookieBanner.style.display = 'none';
+        closeCookieSettings();
+      }
+
+      // Cek cookie consent saat halaman dimuat
+      window.addEventListener('load', () => {
+        if(localStorage.getItem('cookiesAccepted') === 'all' || 
+           (localStorage.getItem('cookieAds') !== null && localStorage.getItem('cookieAnalytics') !== null)) {
+          cookieBanner.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 </html>
