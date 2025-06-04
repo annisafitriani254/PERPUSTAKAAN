@@ -3,52 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perpustakaan Annisa</title>
+  <title>Perpustakaan Annisa | Sumber Literasi Digital & Referensi Akademik</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>PERPUSTAKAAN ANNISA</h1>
     <nav>
-      <a href="about.html" class="button">Tentang Saya</a>
-      <a href="contact-us.html" class="button">Hubungi Kami</a>
-      <a href="tabel.php" class="button">Tabel Perkalian</a>
-      <a href="formulir.html" class="button">Formulir Kunjungan</a>
+      <a href="about.html" class="button" aria-label="Tentang Saya">Tentang Saya</a>
+      <a href="contact-us.html" class="button" aria-label="Hubungi Kami">Hubungi Kami</a>
+      <a href="tabel.php" class="button" aria-label="Tabel Perkalian">Tabel Perkalian</a>
+      <a href="formulir.html" class="button" aria-label="Formulir Kunjungan">Formulir Kunjungan</a>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- Sambutan -->
     <section>
       <h2>Selamat Datang di Perpustakaan Annisa!</h2>
       <div class="gif-container">
         <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Animasi Perpustakaan" class="responsive-gif" />
       </div>
       <p>
-        Selamat datang di Perpustakaan Annisa! Perpustakaan ini hadir sebagai sarana pembelajaran, penelitian, dan pengembangan literasi digital. Kami menyediakan berbagai referensi ilmiah yang mendukung kegiatan akademik dan non-akademik Anda.
+        Perpustakaan Annisa adalah pusat referensi dan literasi digital yang mendukung aktivitas akademik dan penelitian. Kami menyediakan akses ke berbagai sumber ilmiah, koleksi buku elektronik, serta informasi kegiatan literasi terkini.
       </p>
     </section>
 
+    <!-- Kerja Sama -->
     <section>
       <h3>Kerja Sama & Referensi</h3>
-      <a href="http://pustaka.unp.ac.id/kki/" target="_blank">Perpustakaan Universitas Negeri Padang</a>
+      <a href="http://pustaka.unp.ac.id/kki/" target="_blank" rel="noopener noreferrer">Perpustakaan Universitas Negeri Padang</a>
     </section>
 
+    <!-- Pencarian Buku -->
     <section id="search-section">
-      <h2>Cari Buku</h2>
-      <input type="text" id="searchInput" placeholder="Cari buku berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()" />
+      <h2>Pencarian Buku Digital</h2>
+      <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()" aria-label="Pencarian Buku" />
     </section>
 
+    <!-- Rekomendasi Buku -->
     <section id="rekomendasi-buku">
-      <h2>Rekomendasi Buku</h2>
+      <h2>Rekomendasi Buku Pilihan</h2>
       <div class="container" id="bookList">
         <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
-          <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank">
+          <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             <img src="tn_4stepscover-indonesian.jpg" alt="Sampul Buku Empat Langkah Pengampunan" />
           </a>
           <p>Empat Langkah Pengampunan</p>
         </div>
         <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
-          <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank">
+          <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             <img src="B023.png" alt="Sampul Buku Islam’s Reformers" />
           </a>
           <p>Islam’s Reformers</p>
@@ -56,36 +62,38 @@
       </div>
     </section>
 
+    <!-- Event Kegiatan -->
     <section>
-      <h2>Event Kegiatan</h2>
+      <h2>Agenda Kegiatan Literasi</h2>
       <div class="event-card">
         <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Poster Library Literacy Fest" class="event-image" />
         <div class="event-info">
-          <h3>Library Literacy Fest</h3>
+          <h3>Library Literacy Fest 2024</h3>
           <p><strong>Tanggal:</strong> 29 November – 19 Desember 2024</p>
-          <p><em>Lokasi: Perpustakaan UMS</em></p>
-          <p>Kegiatan literasi ini bertujuan meningkatkan kompetensi publikasi dan akses referensi digital oleh Perpustakaan UMS.</p>
+          <p><em>Lokasi:</em> Perpustakaan UMS</p>
+          <p>Kegiatan ini bertujuan meningkatkan literasi publikasi dan penggunaan referensi digital secara luas.</p>
           <a href="#" class="event-button">Info Selengkapnya</a>
-          <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/628122605573" target="_blank">+62 812-3456-7890</a></p>
+          <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/628122605573" target="_blank" rel="noopener noreferrer">+62 812-2605-573</a></p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Annisa Fitriani</p>
+    <p>&copy; 2025 Annisa Fitriani | Perpustakaan Digital Mahasiswa</p>
   </footer>
 
-  <!-- Script JS Utama -->
+  <!-- Script Pencarian Buku -->
   <script src="script.js"></script>
 
-  <!-- Cookie Banner -->
+  <!-- Cookie Consent Banner -->
   <div id="cookie-consent-banner" class="cookie-banner">
     <div class="cookie-content">
       <span class="cookie-icon">🍪</span>
       <div>
         <strong>Kami menggunakan cookie</strong><br>
-        Cookie digunakan untuk memastikan fungsionalitas situs, iklan, dan analitik sesuai <a href="#" class="cookie-link">Kebijakan Privasi</a>.
+        Cookie digunakan untuk fungsionalitas, iklan, dan analitik. Lihat <a href="#" class="cookie-link">Kebijakan Privasi</a>.
       </div>
     </div>
     <div class="cookie-buttons">
@@ -97,8 +105,8 @@
   <!-- Modal Cookie Settings -->
   <div id="cookie-settings-modal" class="cookie-modal">
     <h3>Setelan Cookie</h3>
-    <p>Silakan pilih jenis cookie yang ingin Anda aktifkan:</p>
-    <label><input type="checkbox" checked disabled> Cookie Fungsional (wajib)</label><br>
+    <p>Silakan pilih preferensi cookie Anda:</p>
+    <label><input type="checkbox" checked disabled> Cookie Fungsional (Wajib)</label><br>
     <label><input type="checkbox" id="ads-cookies" checked> Cookie Iklan</label><br>
     <label><input type="checkbox" id="analytics-cookies" checked> Cookie Analitik</label><br><br>
     <button onclick="saveCookieSettings()">Simpan</button>
@@ -109,14 +117,14 @@
   <script>
     function setCookie(name, value, days) {
       const d = new Date();
-      d.setTime(d.getTime() + (days*24*60*60*1000));
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
       document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
     }
 
     function getCookie(name) {
       const cname = name + "=";
       const ca = document.cookie.split(';');
-      for(let c of ca) {
+      for (let c of ca) {
         c = c.trim();
         if (c.indexOf(cname) === 0) return c.substring(cname.length);
       }
@@ -139,18 +147,16 @@
     function saveCookieSettings() {
       const ads = document.getElementById("ads-cookies").checked;
       const analytics = document.getElementById("analytics-cookies").checked;
-      setCookie("cookieConsent", JSON.stringify({ads, analytics}), 30);
+      setCookie("cookieConsent", JSON.stringify({ ads, analytics }), 30);
       document.getElementById("cookie-consent-banner").style.display = "none";
       closeCookieSettings();
     }
 
     window.onload = function () {
-      const cookie = getCookie("cookieConsent");
-      if (cookie) {
+      if (getCookie("cookieConsent")) {
         document.getElementById("cookie-consent-banner").style.display = "none";
       }
-    }
+    };
   </script>
 </body>
 </html>
-
