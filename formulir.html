@@ -37,7 +37,7 @@
 
     main {
       padding: 30px;
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
     }
 
@@ -45,7 +45,13 @@
       color: #3366ff;
     }
 
+    form {
+      margin-top: 20px;
+    }
+
     label {
+      display: block;
+      margin-bottom: 6px;
       font-weight: bold;
     }
 
@@ -54,7 +60,6 @@
     select {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -64,13 +69,27 @@
     input[type="submit"] {
       background-color: #3366ff;
       color: white;
-      padding: 10px 20px;
+      padding: 10px 16px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
     }
 
     input[type="submit"]:hover {
+      background-color: #254eda;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #3366ff;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
       background-color: #254eda;
     }
 
@@ -85,7 +104,7 @@
 </head>
 <body>
   <header>
-    <h1>Formulir Kunjungan Perpustakaan Annisa</h1>
+    <h1>PERPUSTAKAAN ANNISA</h1>
     <nav>
       <a href="index.html" class="button">Beranda</a>
       <a href="about.html" class="button">Tentang Saya</a>
@@ -94,35 +113,42 @@
   </header>
 
   <main>
-    <h2>Isi Formulir di Bawah Ini</h2>
-    <form action="#" method="post">
-      <label for="nama">Nama Lengkap:</label>
-      <input type="text" id="nama" name="nama" required>
+    <section>
+      <h2>Formulir Kunjungan</h2>
+      <p>Silakan isi formulir berikut untuk mencatat kunjungan Anda.</p>
 
-      <label for="nim">NIM/NIS:</label>
-      <input type="text" id="nim" name="nim" required>
+      <form action="#" method="post">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
 
-      <label for="instansi">Asal Instansi:</label>
-      <input type="text" id="instansi" name="instansi" required>
+        <label for="nim">NIM/NIS:</label>
+        <input type="text" id="nim" name="nim" required>
 
-      <label for="tujuan">Tujuan Kunjungan:</label>
-      <select id="tujuan" name="tujuan" required>
-        <option value="">-- Pilih --</option>
-        <option value="membaca">Membaca Buku</option>
-        <option value="mengerjakan tugas">Mengerjakan Tugas</option>
-        <option value="mencari referensi">Mencari Referensi</option>
-      </select>
+        <label for="instansi">Asal Instansi:</label>
+        <input type="text" id="instansi" name="instansi" required>
 
-      <label for="tanggal">Tanggal Kunjungan:</label>
-      <input type="date" id="tanggal" name="tanggal" required>
+        <label for="tujuan">Tujuan Kunjungan:</label>
+        <select id="tujuan" name="tujuan" required>
+          <option value="">-- Pilih --</option>
+          <option value="membaca">Membaca Buku</option>
+          <option value="mengerjakan tugas">Mengerjakan Tugas</option>
+          <option value="mencari referensi">Mencari Referensi</option>
+        </select>
 
-      <input type="submit" value="Kirim">
-    </form>
+        <label for="tanggal">Tanggal Kunjungan:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <input type="submit" value="Kirim">
+      </form>
+
+      <a href="index.html" class="back-link">Kembali ke Beranda</a>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Annisa Fitriani</p>
+    <p>© Annisa Fitriani 2025</p>
   </footer>
 </body>
 </html>
+
 
