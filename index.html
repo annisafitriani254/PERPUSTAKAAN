@@ -9,68 +9,70 @@
 <body>
   <!-- Header -->
   <header>
-    <h1>PERPUSTAKAAN ANNISA</h1>
-    <nav>
-      <a href="about.html" class="button" aria-label="Tentang Saya">Tentang Saya</a>
-      <a href="contact-us.html" class="button" aria-label="Hubungi Kami">Hubungi Kami</a>
-      <a href="tabel.php" class="button" aria-label="Tabel Perkalian">Tabel Perkalian</a>
-      <a href="formulir.html" class="button" aria-label="Formulir Kunjungan">Formulir Kunjungan</a>
-    </nav>
+    <div class="container-header">
+      <h1>📚 Perpustakaan Annisa</h1>
+      <nav class="nav-bar">
+        <a href="about.html" class="button" aria-label="Tentang Saya">Tentang Saya</a>
+        <a href="contact-us.html" class="button" aria-label="Hubungi Kami">Hubungi Kami</a>
+        <a href="tabel.php" class="button" aria-label="Tabel Perkalian">Tabel Perkalian</a>
+        <a href="formulir.html" class="button" aria-label="Formulir Kunjungan">Formulir Kunjungan</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Main Content -->
   <main>
-    <!-- Sambutan -->
-    <section>
-      <h2>Selamat Datang di Perpustakaan Annisa!</h2>
-      <div class="gif-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Selamat Datang di Perpustakaan Annisa!</h2>
         <img src="animasi-bergerak-perpustakaan-0005.gif" alt="Animasi Perpustakaan" class="responsive-gif" />
+        <p>
+          Perpustakaan Annisa adalah pusat referensi dan literasi digital yang mendukung aktivitas akademik dan penelitian. Kami menyediakan akses ke berbagai sumber ilmiah, koleksi buku elektronik, serta informasi kegiatan literasi terkini.
+        </p>
       </div>
-      <p>
-        Perpustakaan Annisa adalah pusat referensi dan literasi digital yang mendukung aktivitas akademik dan penelitian. Kami menyediakan akses ke berbagai sumber ilmiah, koleksi buku elektronik, serta informasi kegiatan literasi terkini.
-      </p>
     </section>
 
-    <!-- Kerja Sama -->
-    <section>
+    <!-- Partner Section -->
+    <section class="section-light">
       <h3>Kerja Sama & Referensi</h3>
-      <a href="http://pustaka.unp.ac.id/kki/" target="_blank" rel="noopener noreferrer">Perpustakaan Universitas Negeri Padang</a>
+      <p><a href="http://pustaka.unp.ac.id/kki/" target="_blank" rel="noopener noreferrer">🌐 Perpustakaan Universitas Negeri Padang</a></p>
     </section>
 
-    <!-- Pencarian Buku -->
-    <section id="search-section">
-      <h2>Pencarian Buku Digital</h2>
+    <!-- Search Book Section -->
+    <section id="search-section" class="section-dark">
+      <h2>Cari Buku Digital</h2>
       <input type="text" id="searchInput" placeholder="Cari berdasarkan judul, penulis, atau kategori..." onkeyup="searchBooks()" aria-label="Pencarian Buku" />
     </section>
 
-    <!-- Rekomendasi Buku -->
-    <section id="rekomendasi-buku">
-      <h2>Rekomendasi Buku Pilihan</h2>
-      <div class="container" id="bookList">
-        <div class="book" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
+    <!-- Recommended Books -->
+    <section id="rekomendasi-buku" class="section-light">
+      <h2>📖 Rekomendasi Buku Pilihan</h2>
+      <div class="book-grid" id="bookList">
+        <div class="book-card" data-title="Empat Langkah Pengampunan" data-author="William Fergus Martin" data-category="Motivasi">
           <a href="https://drive.google.com/file/d/1wNBCOEhe2u6DJo5f7wy75618LmNaveuh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             <img src="tn_4stepscover-indonesian.jpg" alt="Sampul Buku Empat Langkah Pengampunan" />
           </a>
-          <p>Empat Langkah Pengampunan</p>
+          <p><strong>Empat Langkah Pengampunan</strong></p>
         </div>
-        <div class="book" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
+        <div class="book-card" data-title="Islam’s Reformers" data-author="M. Siddik Gümüş" data-category="Agama">
           <a href="https://drive.google.com/file/d/1eES0l8At0OLHqTR9gsCO77oSaDBYg73-/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             <img src="B023.png" alt="Sampul Buku Islam’s Reformers" />
           </a>
-          <p>Islam’s Reformers</p>
+          <p><strong>Islam’s Reformers</strong></p>
         </div>
       </div>
     </section>
 
-    <!-- Event Kegiatan -->
-    <section>
-      <h2>Agenda Kegiatan Literasi</h2>
+    <!-- Events -->
+    <section class="section-dark">
+      <h2>🗓️ Agenda Kegiatan Literasi</h2>
       <div class="event-card">
         <img src="FtRGKx5GoV1vtOfGUa7do93pG4gbpKmPfLoNc1ma.jpg" alt="Poster Library Literacy Fest" class="event-image" />
         <div class="event-info">
           <h3>Library Literacy Fest 2024</h3>
           <p><strong>Tanggal:</strong> 29 November – 19 Desember 2024</p>
-          <p><em>Lokasi:</em> Perpustakaan UMS</p>
+          <p><strong>Lokasi:</strong> Perpustakaan UMS</p>
           <p>Kegiatan ini bertujuan meningkatkan literasi publikasi dan penggunaan referensi digital secara luas.</p>
           <a href="#" class="event-button">Info Selengkapnya</a>
           <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/628122605573" target="_blank" rel="noopener noreferrer">+62 812-2605-573</a></p>
@@ -84,7 +86,7 @@
     <p>&copy; 2025 Annisa Fitriani | Perpustakaan Digital Mahasiswa</p>
   </footer>
 
-  <!-- Script Pencarian Buku -->
+  <!-- Script JS -->
   <script src="script.js"></script>
 
   <!-- Cookie Consent Banner -->
